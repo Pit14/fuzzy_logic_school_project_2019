@@ -42,17 +42,18 @@ public class Main extends Application {
                 {dr,dr,la,la,mi,ro,ro,ro,mi,gr,gr,gr,gr,gr,ro,ro,mi,la,mi,gr,gr},
                 {gr,dr,dr,dr,dr,mi,mi,ro,mi,dr,ro,dr,mi,ro,ro,mi,gr,mi,gr,mi,mi},
                 {dr,la,dr,dr,dr,dr,dr,ro,ro,mi,mi,ro,ro,mi,mi,gr,gr,gr,gr,mi,mi},
-                {la,dr,la,dr,dr,dr,mi,mi,ro,mi,ro,ro,mi,mi,mi,mi,mi,gr,mi,mi,mi},
-                {la,la,la,dr,mi,mi,dr,dr,mi,mi,ro,ro,mi,mi,mi,mi,mi,mi,mi,mi,mi},
-                {la,gr,dr,la,dr,dr,mi,dr,mi,mi,ro,mi,ro,mi,mi,mi,mi,mi,mi,mi,mi},
-                {gr,gr,gr,la,mi,mi,mi,mi,mi,mi,mi,mi,ro,mi,mi,mi,mi,mi,mi,mi,mi},
-                {gr,la,la,la,mi,mi,mi,mi,mi,mi,mi,ro,ro,mi,mi,mi,mi,mi,mi,mi,mi},
-                {dr,dr,la,la,dr,dr,mi,mi,ro,ro,ro,ro,ro,ro,mi,mi,mi,mi,mi,dr,dr},
+                {la,dr,la,dr,gr,gr,mi,mi,ro,mi,ro,ro,mi,mi,mi,mi,mi,gr,mi,mi,mi},
+                {la,la,la,dr,mi,mi,gr,dr,gr,gr,ro,ro,mi,mi,mi,mi,mi,mi,mi,mi,mi},
+                {la,gr,dr,la,dr,dr,gr,gr,gr,mi,ro,gr,ro,mi,mi,mi,mi,mi,mi,mi,gr},
+                {gr,gr,gr,la,mi,mi,gr,gr,gr,gr,gr,mi,ro,mi,mi,mi,mi,gr,mi,gr,mi},
+                {gr,la,la,la,mi,mi,gr,mi,gr,gr,gr,ro,ro,mi,mi,gr,gr,gr,mi,mi,mi},
+                {dr,dr,la,la,dr,dr,gr,gr,ro,ro,ro,ro,ro,ro,mi,mi,mi,gr,mi,dr,dr},
                 {la,la,la,la,mi,ro,ro,ro,ro,ro,gr,mi,mi,ro,ro,ro,dr,mi,la,la,la},
                 {gr,la,ro,ro,ro,ro,ro,gr,mi,gr,gr,gr,gr,gr,gr,ro,ro,ro,mi,la,la},
                 {la,ro,ro,la,mi,gr,gr,gr,la,la,mi,gr,gr,gr,gr,gr,mi,ro,ro,la,la},
                 {ro,ro,la,gr,mi,mi,gr,mi,dr,dr,gr,gr,gr,gr,gr,gr,dr,la,la,la,la}
         };
+
 
         GridPane gridPane = new GridPane();
 
