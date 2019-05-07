@@ -1,36 +1,31 @@
-package sample;
-
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.image.WritableImage;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import javafx.application.Application;
-import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.StackPane;
-import javafx.stage.Stage;
 
 public class Main extends Application {
+
+    private static final int HEIGHT = 22;
+    private static final int WIDTH = 22;
+
+    Image la = new Image ("img/lake.jpg");
+    Image     mi = new Image ("img/mineral.png");
+    Image  gr = new Image ("img/grass.png");
+    Image   de = new Image ("img/desert.png");
+    Image  dr = new Image ("img/dry_land.jpg");
+    Image  ro = new Image ("img/useless_rock.jpg");
 
     private final int tileSize = 45 ;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
 
-        Image la = new Image ("img/lake.jpg");
-        Image mi = new Image ("img/mineral.png");
-        Image gr = new Image ("img/grass.png");
-        Image de = new Image ("img/desert.png");
-        Image dr = new Image ("img/dry_land.jpg");
-        Image ro = new Image ("img/useless_rock.jpg");
+        System.out.println("CC JEJE");
+        Planet planet = new Planet();
 
+        Images_manager i = new Images_manager();
         Image[][] grid = {
                 {la,la,la,la,dr,gr,de,de,de,de,de,de,gr,dr,dr,dr,gr,dr,dr,mi,ro},
                 {la,la,dr,dr,dr,gr,de,de,de,de,dr,gr,gr,gr,dr,gr,dr,dr,mi,ro,ro},
@@ -51,9 +46,18 @@ public class Main extends Application {
                 {la,la,la,la,mi,ro,ro,ro,ro,ro,gr,mi,mi,ro,ro,ro,dr,mi,la,la,la},
                 {gr,la,ro,ro,ro,ro,ro,gr,mi,gr,gr,gr,gr,gr,gr,ro,ro,ro,mi,la,la},
                 {la,ro,ro,la,mi,gr,gr,gr,la,la,mi,gr,gr,gr,gr,gr,mi,ro,ro,la,la},
+                {la,ro,ro,la,mi,gr,gr,gr,la,la,mi,gr,gr,gr,gr,gr,mi,ro,ro,la,la},
                 {ro,ro,la,gr,mi,mi,gr,mi,dr,dr,gr,gr,gr,gr,gr,gr,dr,la,la,la,la}
         };
 
+        
+        int x,y;
+
+        for(y=0;y<HEIGHT-1;y++){
+            for(x=0;x<WIDTH-1;x++){
+                grid[y][x] = i.StateToImage(planet.cells[y][x].getState());
+            }
+        }
 
         GridPane gridPane = new GridPane();
 
@@ -62,8 +66,8 @@ public class Main extends Application {
         gridPane.setVgap(0);
         gridPane.setStyle("-fx-background-color: grey;");
 
-        for (int y = 0 ; y < grid.length ; y++) {
-            for (int x = 0 ; x < grid[y].length ; x++) {
+        for (y = 0 ; y < grid.length ; y++) {
+            for (x = 0 ; x < grid[y].length ; x++) {
                 ImageView imageView = new ImageView(grid[y][x]);
                 imageView.setFitWidth(tileSize);
                 imageView.setFitHeight(tileSize);
@@ -75,10 +79,9 @@ public class Main extends Application {
         primaryStage.show();
     }
 
-
-
-
     public static void main(String[] args) {
         launch(args);
     }
+
+
 }
