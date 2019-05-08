@@ -1,16 +1,15 @@
 enum State{
     BASE,
-    MINERAL,
-    USELESS_ROCK,
-    FOREST,
-    DRY_LAND,
-    NORMAL_LAND,
-    WET_LAND,
-    LAKE,
+    MINERAI,
+    PIERRAILLE,
+    FORET,
+    PRAIRIE_SECHE,
+    PRAIRIE_NORMALE,
+    PRAIRIE_GRASSE,
+    LAC,
     DESERT,
-    FOOD,
-    FORBIDEN;
-
+    NOURRITURE,
+    ZONE_INFRANCHISSABLE;
 }
 
 public class Cell {

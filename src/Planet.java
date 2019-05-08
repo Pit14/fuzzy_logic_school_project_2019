@@ -1,7 +1,7 @@
 public class Planet {
 
-    private static final int HEIGHT = 22;
-    private static final int WIDTH = 22;
+    private static final int HEIGHT = 21;
+    private static final int WIDTH = 21;
 
     Cell[][] cells;
 
@@ -12,96 +12,57 @@ public class Planet {
 
         for(y=0;y<HEIGHT;y++){
             for(x=0;x<WIDTH;x++){
-                cells[y][x] = new Cell(new Coord(y,x),State.MINERAL);
+                cells[y][x] = new Cell(new Coord(y,x),State.MINERAI);
             }
         }
 
         State[][] states = {
-            {State.LAKE,State.LAKE,State.LAKE,State.LAKE,State.DRY_LAND,State.WET_LAND,State.DESERT,State.DESERT,State.DESERT,State.DESERT,State.DESERT,State.DESERT,State.WET_LAND,State.DRY_LAND,State.DRY_LAND,State.DRY_LAND,State.WET_LAND,State.DRY_LAND,State.DRY_LAND,State.MINERAL,State.USELESS_ROCK},
-            {State.LAKE,State.LAKE,State.DRY_LAND,State.DRY_LAND,State.DRY_LAND,State.WET_LAND,State.DESERT,State.DESERT,State.DESERT,State.DESERT,State.DRY_LAND,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.DRY_LAND,State.WET_LAND,State.DRY_LAND,State.DRY_LAND,State.MINERAL,State.USELESS_ROCK,State.USELESS_ROCK},
-            {State.LAKE,State.DRY_LAND,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.DRY_LAND,State.DESERT,State.DESERT,State.DESERT,State.DRY_LAND,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.MINERAL,State.USELESS_ROCK,State.LAKE,State.USELESS_ROCK},
-            {State.LAKE,State.USELESS_ROCK,State.WET_LAND,State.WET_LAND,State.DRY_LAND,State.DRY_LAND,State.DESERT,State.DESERT,State.MINERAL,State.DRY_LAND,State.WET_LAND,State.LAKE,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.MINERAL,State.USELESS_ROCK,State.USELESS_ROCK,State.MINERAL},
-            {State.DRY_LAND,State.USELESS_ROCK,State.LAKE,State.USELESS_ROCK,State.USELESS_ROCK,State.USELESS_ROCK,State.DRY_LAND,State.DESERT,State.DRY_LAND,State.DRY_LAND,State.WET_LAND,State.LAKE,State.LAKE,State.WET_LAND,State.WET_LAND,State.MINERAL,State.MINERAL,State.MINERAL,State.LAKE,State.LAKE,State.LAKE},
-            {State.DRY_LAND,State.DRY_LAND,State.USELESS_ROCK,State.USELESS_ROCK,State.USELESS_ROCK,State.MINERAL,State.MINERAL,State.DRY_LAND,State.DRY_LAND,State.DRY_LAND,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.MINERAL,State.MINERAL,State.LAKE,State.LAKE,State.LAKE,State.MINERAL},
-            {State.WET_LAND,State.DRY_LAND,State.USELESS_ROCK,State.LAKE,State.USELESS_ROCK,State.USELESS_ROCK,State.USELESS_ROCK,State.USELESS_ROCK,State.MINERAL,State.MINERAL,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.USELESS_ROCK,State.LAKE,State.LAKE,State.MINERAL,State.WET_LAND},
-            {State.DRY_LAND,State.DRY_LAND,State.LAKE,State.LAKE,State.MINERAL,State.USELESS_ROCK,State.USELESS_ROCK,State.USELESS_ROCK,State.MINERAL,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.USELESS_ROCK,State.USELESS_ROCK,State.MINERAL,State.LAKE,State.MINERAL,State.WET_LAND,State.WET_LAND},
-            {State.WET_LAND,State.DRY_LAND,State.DRY_LAND,State.DRY_LAND,State.DRY_LAND,State.MINERAL,State.MINERAL,State.USELESS_ROCK,State.MINERAL,State.DRY_LAND,State.USELESS_ROCK,State.DRY_LAND,State.MINERAL,State.USELESS_ROCK,State.USELESS_ROCK,State.MINERAL,State.WET_LAND,State.MINERAL,State.WET_LAND,State.MINERAL,State.MINERAL},
-            {State.DRY_LAND,State.LAKE,State.DRY_LAND,State.DRY_LAND,State.DRY_LAND,State.DRY_LAND,State.DRY_LAND,State.USELESS_ROCK,State.USELESS_ROCK,State.MINERAL,State.MINERAL,State.USELESS_ROCK,State.USELESS_ROCK,State.MINERAL,State.MINERAL,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.MINERAL,State.MINERAL},
-            {State.LAKE,State.DRY_LAND,State.LAKE,State.DRY_LAND,State.WET_LAND,State.WET_LAND,State.MINERAL,State.MINERAL,State.USELESS_ROCK,State.MINERAL,State.USELESS_ROCK,State.USELESS_ROCK,State.MINERAL,State.MINERAL,State.MINERAL,State.MINERAL,State.MINERAL,State.WET_LAND,State.MINERAL,State.MINERAL,State.MINERAL},
-            {State.LAKE,State.LAKE,State.LAKE,State.DRY_LAND,State.MINERAL,State.MINERAL,State.WET_LAND,State.DRY_LAND,State.WET_LAND,State.WET_LAND,State.USELESS_ROCK,State.USELESS_ROCK,State.MINERAL,State.MINERAL,State.MINERAL,State.MINERAL,State.MINERAL,State.MINERAL,State.MINERAL,State.MINERAL,State.MINERAL},
-            {State.LAKE,State.WET_LAND,State.DRY_LAND,State.LAKE,State.DRY_LAND,State.DRY_LAND,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.MINERAL,State.USELESS_ROCK,State.WET_LAND,State.USELESS_ROCK,State.MINERAL,State.MINERAL,State.MINERAL,State.MINERAL,State.MINERAL,State.MINERAL,State.MINERAL,State.WET_LAND},
-            {State.WET_LAND,State.WET_LAND,State.WET_LAND,State.LAKE,State.MINERAL,State.MINERAL,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.MINERAL,State.USELESS_ROCK,State.MINERAL,State.MINERAL,State.MINERAL,State.MINERAL,State.WET_LAND,State.MINERAL,State.WET_LAND,State.MINERAL},
-            {State.WET_LAND,State.LAKE,State.LAKE,State.LAKE,State.MINERAL,State.MINERAL,State.WET_LAND,State.MINERAL,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.USELESS_ROCK,State.USELESS_ROCK,State.MINERAL,State.MINERAL,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.MINERAL,State.MINERAL,State.MINERAL},
-            {State.DRY_LAND,State.DRY_LAND,State.LAKE,State.LAKE,State.DRY_LAND,State.DRY_LAND,State.WET_LAND,State.WET_LAND,State.USELESS_ROCK,State.USELESS_ROCK,State.USELESS_ROCK,State.USELESS_ROCK,State.USELESS_ROCK,State.USELESS_ROCK,State.MINERAL,State.MINERAL,State.MINERAL,State.WET_LAND,State.MINERAL,State.DRY_LAND,State.DRY_LAND},
-            {State.LAKE,State.LAKE,State.LAKE,State.LAKE,State.MINERAL,State.USELESS_ROCK,State.USELESS_ROCK,State.USELESS_ROCK,State.USELESS_ROCK,State.USELESS_ROCK,State.WET_LAND,State.MINERAL,State.MINERAL,State.USELESS_ROCK,State.USELESS_ROCK,State.USELESS_ROCK,State.DRY_LAND,State.MINERAL,State.LAKE,State.LAKE,State.LAKE},
-            {State.WET_LAND,State.LAKE,State.USELESS_ROCK,State.USELESS_ROCK,State.USELESS_ROCK,State.USELESS_ROCK,State.USELESS_ROCK,State.WET_LAND,State.MINERAL,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.USELESS_ROCK,State.USELESS_ROCK,State.USELESS_ROCK,State.MINERAL,State.LAKE,State.LAKE},
-            {State.LAKE,State.USELESS_ROCK,State.USELESS_ROCK,State.LAKE,State.MINERAL,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.LAKE,State.LAKE,State.MINERAL,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.MINERAL,State.USELESS_ROCK,State.USELESS_ROCK,State.LAKE,State.LAKE},
-            {State.LAKE,State.USELESS_ROCK,State.USELESS_ROCK,State.LAKE,State.MINERAL,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.LAKE,State.LAKE,State.MINERAL,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.MINERAL,State.USELESS_ROCK,State.USELESS_ROCK,State.LAKE,State.LAKE},
-            {State.USELESS_ROCK,State.USELESS_ROCK,State.LAKE,State.WET_LAND,State.MINERAL,State.MINERAL,State.WET_LAND,State.MINERAL,State.DRY_LAND,State.DRY_LAND,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.WET_LAND,State.DRY_LAND,State.LAKE,State.LAKE,State.LAKE,State.LAKE}
+                {State.LAC,State.LAC,State.LAC,State.LAC,State.PRAIRIE_SECHE,State.PRAIRIE_GRASSE,State.DESERT,State.DESERT,State.DESERT,State.DESERT,State.DESERT,State.DESERT,State.PRAIRIE_GRASSE,State.PRAIRIE_SECHE,State.PRAIRIE_SECHE,State.PRAIRIE_SECHE,State.PRAIRIE_GRASSE,State.PRAIRIE_SECHE,State.PRAIRIE_SECHE,State.MINERAI,State.PIERRAILLE},
+                {State.LAC,State.LAC,State.PRAIRIE_SECHE,State.PRAIRIE_SECHE,State.PRAIRIE_SECHE,State.PRAIRIE_GRASSE,State.DESERT,State.DESERT,State.DESERT,State.DESERT,State.PRAIRIE_SECHE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_SECHE,State.PRAIRIE_GRASSE,State.PRAIRIE_SECHE,State.PRAIRIE_SECHE,State.NOURRITURE,State.PIERRAILLE,State.PIERRAILLE},
+                {State.LAC,State.PRAIRIE_SECHE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_SECHE,State.DESERT,State.DESERT,State.DESERT,State.PRAIRIE_SECHE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_NORMALE,State.PIERRAILLE,State.LAC,State.PIERRAILLE},
+                {State.LAC,State.PIERRAILLE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_SECHE,State.PRAIRIE_SECHE,State.DESERT,State.DESERT,State.ZONE_INFRANCHISSABLE,State.PRAIRIE_SECHE,State.PRAIRIE_GRASSE,State.LAC,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_NORMALE,State.PIERRAILLE,State.PIERRAILLE,State.NOURRITURE},
+                {State.PRAIRIE_SECHE,State.PIERRAILLE,State.PIERRAILLE,State.PIERRAILLE,State.PRAIRIE_SECHE,State.PRAIRIE_SECHE,State.PRAIRIE_SECHE,State.DESERT,State.PRAIRIE_SECHE,State.PRAIRIE_SECHE,State.PRAIRIE_GRASSE,State.LAC,State.LAC,State.PRAIRIE_GRASSE,State.NOURRITURE,State.PRAIRIE_NORMALE,State.PRAIRIE_NORMALE,State.PRAIRIE_NORMALE,State.LAC,State.LAC,State.LAC},
+                {State.PRAIRIE_SECHE,State.PRAIRIE_SECHE,State.PRAIRIE_GRASSE,State.PIERRAILLE,State.PIERRAILLE,State.PIERRAILLE,State.PRAIRIE_GRASSE,State.PRAIRIE_SECHE,State.PRAIRIE_SECHE,State.PRAIRIE_SECHE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.NOURRITURE,State.PRAIRIE_GRASSE,State.PRAIRIE_NORMALE,State.ZONE_INFRANCHISSABLE,State.LAC,State.LAC,State.LAC,State.PRAIRIE_NORMALE},
+                {State.PRAIRIE_GRASSE,State.PRAIRIE_SECHE,State.PIERRAILLE,State.PIERRAILLE,State.PIERRAILLE,State.MINERAI,State.PRAIRIE_GRASSE,State.PRAIRIE_NORMALE,State.PRAIRIE_NORMALE,State.PRAIRIE_NORMALE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.LAC,State.LAC,State.LAC,State.PRAIRIE_NORMALE,State.PRAIRIE_GRASSE},
+                {State.PRAIRIE_SECHE,State.PRAIRIE_SECHE,State.PIERRAILLE,State.MINERAI,State.PIERRAILLE,State.PIERRAILLE,State.PIERRAILLE,State.PIERRAILLE,State.PRAIRIE_NORMALE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PIERRAILLE,State.LAC,State.PRAIRIE_NORMALE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE},
+                {State.PRAIRIE_GRASSE,State.PRAIRIE_SECHE,State.PRAIRIE_SECHE,State.PRAIRIE_SECHE,State.PRAIRIE_SECHE,State.PIERRAILLE,State.PIERRAILLE,State.PIERRAILLE,State.PRAIRIE_GRASSE,State.PRAIRIE_SECHE,State.PRAIRIE_NORMALE,State.PRAIRIE_SECHE,State.PRAIRIE_NORMALE,State.PRAIRIE_NORMALE,State.PIERRAILLE,State.PIERRAILLE,State.PRAIRIE_GRASSE,State.NOURRITURE,State.PRAIRIE_GRASSE,State.PRAIRIE_NORMALE,State.PRAIRIE_NORMALE},
+                {State.PRAIRIE_SECHE,State.PRAIRIE_GRASSE,State.PRAIRIE_SECHE,State.PRAIRIE_SECHE,State.PRAIRIE_SECHE,State.PRAIRIE_SECHE,State.PRAIRIE_SECHE,State.PIERRAILLE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PIERRAILLE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PIERRAILLE,State.PIERRAILLE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_NORMALE,State.PRAIRIE_NORMALE},
+                {State.FORET,State.PRAIRIE_SECHE,State.PRAIRIE_GRASSE,State.PRAIRIE_SECHE,State.PRAIRIE_SECHE,State.PRAIRIE_SECHE,State.ZONE_INFRANCHISSABLE,State.PIERRAILLE,State.PIERRAILLE,State.PRAIRIE_GRASSE,State.BASE,State.PIERRAILLE,State.PIERRAILLE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_SECHE,State.PRAIRIE_SECHE,State.PRAIRIE_GRASSE,State.PRAIRIE_NORMALE,State.LAC,State.LAC},
+                {State.FORET,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_SECHE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_SECHE,State.PRAIRIE_SECHE,State.PIERRAILLE,State.LAC,State.PIERRAILLE,State.PIERRAILLE,State.PRAIRIE_NORMALE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_NORMALE,State.LAC,State.PRAIRIE_NORMALE,State.LAC,State.LAC,State.PRAIRIE_NORMALE},
+                {State.FORET,State.PRAIRIE_GRASSE,State.PRAIRIE_SECHE,State.LAC,State.PRAIRIE_SECHE,State.PRAIRIE_SECHE,State.PRAIRIE_GRASSE,State.PRAIRIE_SECHE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PIERRAILLE,State.PIERRAILLE,State.PRAIRIE_NORMALE,State.PRAIRIE_NORMALE,State.NOURRITURE,State.LAC,State.PRAIRIE_NORMALE,State.PRAIRIE_NORMALE,State.LAC,State.FORET,State.FORET},
+                {State.FORET,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_NORMALE,State.NOURRITURE,State.LAC,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.NOURRITURE,State.PIERRAILLE,State.PRAIRIE_GRASSE,State.PIERRAILLE,State.PRAIRIE_NORMALE,State.PRAIRIE_NORMALE,State.NOURRITURE,State.FORET,State.FORET,State.FORET,State.FORET,State.FORET},
+                {State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.NOURRITURE,State.NOURRITURE,State.LAC,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.MINERAI,State.PIERRAILLE,State.PRAIRIE_NORMALE,State.PRAIRIE_SECHE,State.FORET,State.FORET,State.FORET,State.FORET,State.FORET,State.PRAIRIE_GRASSE},
+                {State.PRAIRIE_GRASSE,State.NOURRITURE,State.NOURRITURE,State.PRAIRIE_GRASSE,State.LAC,State.LAC,State.PRAIRIE_GRASSE,State.ZONE_INFRANCHISSABLE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PIERRAILLE,State.PIERRAILLE,State.PRAIRIE_SECHE,State.PRAIRIE_NORMALE,State.FORET,State.FORET,State.PRAIRIE_GRASSE,State.FORET,State.PRAIRIE_GRASSE,State.PRAIRIE_NORMALE},
+                {State.LAC,State.LAC,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_SECHE,State.PRAIRIE_SECHE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PIERRAILLE,State.PIERRAILLE,State.PIERRAILLE,State.PIERRAILLE,State.PIERRAILLE,State.PIERRAILLE,State.PRAIRIE_NORMALE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.NOURRITURE,State.PRAIRIE_SECHE,State.PRAIRIE_SECHE},
+                {State.PRAIRIE_NORMALE,State.PRAIRIE_NORMALE,State.PRAIRIE_NORMALE,State.PRAIRIE_NORMALE,State.PRAIRIE_NORMALE,State.PIERRAILLE,State.PIERRAILLE,State.PIERRAILLE,State.PIERRAILLE,State.PIERRAILLE,State.PRAIRIE_GRASSE,State.PRAIRIE_NORMALE,State.PRAIRIE_NORMALE,State.PIERRAILLE,State.PIERRAILLE,State.PIERRAILLE,State.PRAIRIE_SECHE,State.PRAIRIE_GRASSE,State.PRAIRIE_NORMALE,State.PRAIRIE_NORMALE,State.LAC},
+                {State.PRAIRIE_GRASSE,State.PRAIRIE_NORMALE,State.PIERRAILLE,State.PIERRAILLE,State.PIERRAILLE,State.PIERRAILLE,State.PIERRAILLE,State.PRAIRIE_GRASSE,State.PRAIRIE_NORMALE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PIERRAILLE,State.PIERRAILLE,State.PIERRAILLE,State.LAC,State.LAC,State.LAC},
+                {State.LAC,State.PIERRAILLE,State.PIERRAILLE,State.LAC,State.LAC,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.LAC,State.LAC,State.PRAIRIE_NORMALE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.MINERAI,State.PIERRAILLE,State.PIERRAILLE,State.LAC,State.LAC},
+                {State.PIERRAILLE,State.PIERRAILLE,State.LAC,State.PRAIRIE_GRASSE,State.ZONE_INFRANCHISSABLE,State.NOURRITURE,State.PRAIRIE_GRASSE,State.PRAIRIE_NORMALE,State.PRAIRIE_SECHE,State.PRAIRIE_SECHE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_GRASSE,State.PRAIRIE_SECHE,State.LAC,State.LAC,State.LAC,State.LAC}
         };
 
 
-        for(y=0;y<HEIGHT-1;y++){
-            for(x=0;x<WIDTH-1;x++){
+        for(y=0;y<HEIGHT;y++){
+            for(x=0;x<WIDTH;x++){
                 cells[y][x].setState(states[y][x]);
             }
         }
-
-//        //top left State.LAKE :
-//        for(x=0;x<4;x++){
-//            cells[0][x].setState(State.State.LAKE);
-//        }
-//        for(y=1;y<4;y++){
-//            cells[y][0].setState(State.State.LAKE);
-//        }
-//        cells[1][1].setState(State.State.LAKE);
-//
-//        //State.DESERTsert
-//        for(x=6;x<12;x++){
-//            cells[0][x].setState(State.State.DESERTSERT);
-//        }
-//        for(x=6;x<10;x++){
-//            cells[1][x].setState(State.State.DESERTSERT);
-//        }
-//        for(x=6;x<9;x++){
-//            cells[2][x].setState(State.State.DESERTSERT);
-//        }
-//        for(x=6;x<8;x++){
-//            cells[3][x].setState(State.State.DESERTSERT);
-//        }
-//        cells[4][7].setState(State.State.DESERTSERT);
-
-
     }
 
-    void display_map() {
-        int x,y;
+    public void metamorphose(int transformation_percentage){
+        int x,y,rand;
+
         for(y=0;y<HEIGHT;y++){
             for(x=0;x<WIDTH;x++){
-//                System.out.print(cells[y][x].getState().toString());
-                display_cell(cells[y][x].getState());
+                rand = (int)(Math.random() * 101);
+                System.out.println(rand);
+                if(rand < transformation_percentage){
+                    cells[y][x].setState(pick_state(cells[y][x].getState()));
+                }
             }
-            System.out.println("");
         }
     }
 
-    void display_cell(State s){
-        switch(s){
-            case MINERAL:
-                System.out.print("[M] ");
-                break;
-            case LAKE:
-                System.out.print("[L] ");
-                break;
-            case DESERT:
-                System.out.print("[D] ");
-                break;
-            default:
-                System.out.print("[x] ");
-                break;
-
-
-
-        }
+    public State pick_state(State s) {
+        return State.LAC;
     }
 }

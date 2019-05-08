@@ -1,7 +1,7 @@
 public class CEO_robot extends Robot {
 
 
-    private int food;
+    private int NOURRITURE;
     private int water;
     private int resources;
     private Cell[][] resources_map;
@@ -21,12 +21,12 @@ public class CEO_robot extends Robot {
         water -= consumption;
     }
 
-    public void add_food( int deposit) {
-        food += deposit;
+    public void add_NOURRITURE( int deposit) {
+        NOURRITURE += deposit;
     }
 
-    public void take_food ( int consumption) {
-        food -= consumption;
+    public void take_NOURRITURE ( int consumption) {
+        NOURRITURE -= consumption;
     }
 
     public void add_resources( int deposit) {

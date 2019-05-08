@@ -2,12 +2,17 @@ import javafx.scene.image.Image;
 
 public class Images_manager {
 
-    Image la = new Image ("img/lake.jpg");
-    Image mi = new Image ("img/mineral.png");
-    Image gr = new Image ("img/grass.png");
+    Image la = new Image ("img/lake.PNG");
+    Image mi = new Image ("img/minerai.png");
+    Image gr = new Image ("img/prairie_grasse.png");
     Image de = new Image ("img/desert.png");
-    Image dr = new Image ("img/dry_land.jpg");
-    Image ro = new Image ("img/useless_rock.jpg");
+    Image dr = new Image ("img/prairie_seche.png");
+    Image ro = new Image ("img/pierraille.png");
+    Image fo = new Image ("img/food.png");
+    Image zo = new Image ("img/zone_infranchissable.png");
+    Image di = new Image ("img/prairie_normale.png");
+    Image ba = new Image ("img/base.png");
+    Image ar = new Image ("img/foret.png");
 
     public void Images_manager(){
 
@@ -16,18 +21,28 @@ public class Images_manager {
     public Image StateToImage(State s){
 
         switch (s){
-            case USELESS_ROCK:
+            case PIERRAILLE:
                 return ro;
-            case WET_LAND:
+            case PRAIRIE_GRASSE:
                 return gr;
-            case MINERAL:
+            case MINERAI:
                 return mi;
-            case LAKE:
+            case LAC:
                 return la;
             case DESERT:
                 return de;
-            case DRY_LAND:
+            case PRAIRIE_SECHE:
                 return dr;
+            case NOURRITURE:
+                return fo;
+            case ZONE_INFRANCHISSABLE:
+                return zo;
+            case PRAIRIE_NORMALE:
+                return di;
+            case BASE:
+                return ba;
+            case FORET:
+                return ar;
             default:
                 return mi;
         }
