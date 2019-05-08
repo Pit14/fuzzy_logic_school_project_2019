@@ -62,7 +62,121 @@ public class Planet {
         }
     }
 
-    public State pick_state(State s) {
+    private State pick_state(State s) {
+        int rand = (int)(Math.random() * 100);
+
+        switch (s){
+            case FORET:
+                return pick_state_foret(rand);
+            case PRAIRIE_SECHE:
+                return pick_state_prairie_seche(rand);
+            case PRAIRIE_NORMALE:
+                return pick_state_prairie_normal(rand);
+            case PRAIRIE_GRASSE:
+                return pick_state_prairie_grasse(rand);
+            case DESERT:
+                return pick_state_desert(rand);
+            case NOURRITURE:
+                return pick_state_nourriture(rand);
+            case ZONE_INFRANCHISSABLE:
+                return pick_state_zone_infranchissable(rand);
+            case PIERRAILLE:
+                return pick_state_pierralle(rand);
+            case MINERAI:
+                return pick_state_minerai(rand);
+        }
         return State.LAC;
     }
+
+    private State pick_state_foret(int rand) {
+        if(rand < 20) {
+            return State.PRAIRIE_SECHE;
+        } else if (rand < 50) {
+            return State.PRAIRIE_NORMALE;
+        } else if(rand < 90) {
+            return State.PRAIRIE_GRASSE;
+        } else if(rand < 99) {
+            return State.DESERT;
+        } else {
+            return State.ZONE_INFRANCHISSABLE;
+        }
+    }
+
+    private State pick_state_prairie_seche(int rand) {
+        if(rand < 80) {
+            return State.DESERT;
+        } else if (rand < 99) {
+            return State.NOURRITURE;
+        } else {
+            return State.ZONE_INFRANCHISSABLE;
+        }
+    }
+
+    private State pick_state_prairie_normal(int rand) {
+        if(rand < 10) {
+            return State.DESERT;
+        } else if (rand < 70) {
+            return State.PRAIRIE_SECHE;
+        } else {
+            return State.NOURRITURE;
+        }
+    }
+
+    private State pick_state_prairie_grasse(int rand) {
+        if(rand < 5) {
+            return State.DESERT;
+        } else if (rand < 45) {
+            return State.PRAIRIE_NORMALE;
+        } else if (rand < 75) {
+            return State.PRAIRIE_SECHE;
+        }else {
+            return State.NOURRITURE;
+        }
+    }
+
+    private State pick_state_desert(int rand) {
+        if(rand < 30) {
+            return State.PRAIRIE_SECHE;
+        } else {
+            return State.ZONE_INFRANCHISSABLE;
+        }
+    }
+    private State pick_state_nourriture(int rand) {
+        if(rand < 50) {
+            return State.PRAIRIE_GRASSE;
+        } else if (rand < 80) {
+            return State.PRAIRIE_NORMALE;
+        } else if (rand < 90) {
+            return State.PRAIRIE_SECHE;
+        }else {
+            return State.FORET;
+        }
+    }
+
+    private State pick_state_zone_infranchissable(int rand) {
+        if(rand < 30) {
+            return State.DESERT;
+        } else {
+            return State.ZONE_INFRANCHISSABLE;
+        }
+    }
+
+    private State pick_state_pierralle(int rand) {
+        if(rand < 2) {
+            return State.MINERAI;
+        } else {
+            return State.PIERRAILLE;
+        }
+    }
+
+    private State pick_state_minerai(int rand) {
+        if(rand < 5) {
+            return State.PIERRAILLE;
+        } else {
+            return State.MINERAI;
+        }
+    }
+
+
+
 }
