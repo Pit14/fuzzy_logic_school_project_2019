@@ -1,16 +1,4 @@
-enum State{
-    BASE,
-    MINERAI,
-    PIERRAILLE,
-    FORET,
-    PRAIRIE_SECHE,
-    PRAIRIE_NORMALE,
-    PRAIRIE_GRASSE,
-    LAC,
-    DESERT,
-    NOURRITURE,
-    ZONE_INFRANCHISSABLE;
-}
+package util;
 
 public class Cell {
     private Coord coord;

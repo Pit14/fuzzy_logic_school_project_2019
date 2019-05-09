@@ -1,9 +1,19 @@
+package planet;
+
+import util.Cell;
+import util.Coord;
+import util.State;
+
 public class Planet {
 
     private static final int HEIGHT = 21;
     private static final int WIDTH = 21;
 
-    Cell[][] cells;
+    private Cell[][] cells;
+
+    public Cell[][] getCells() {
+        return cells;
+    }
 
     public Planet() {
         System.out.println("Instanciation de la planète.");
@@ -12,7 +22,7 @@ public class Planet {
 
         for(y=0;y<HEIGHT;y++){
             for(x=0;x<WIDTH;x++){
-                cells[y][x] = new Cell(new Coord(y,x),State.MINERAI);
+                cells[y][x] = new Cell(new Coord(y,x), State.MINERAI);
             }
         }
 
@@ -54,7 +64,7 @@ public class Planet {
         for(y=0;y<HEIGHT;y++){
             for(x=0;x<WIDTH;x++){
                 rand = (int)(Math.random() * 101);
-                System.out.println(rand);
+//                System.out.println(rand);
                 if(rand < transformation_percentage){
                     cells[y][x].setState(pick_state(cells[y][x].getState()));
                 }
@@ -84,8 +94,11 @@ public class Planet {
                 return pick_state_pierralle(rand);
             case MINERAI:
                 return pick_state_minerai(rand);
+            case LAC:
+                return State.LAC;
+                default:
+                    return State.BASE;
         }
-        return State.LAC;
     }
 
     private State pick_state_foret(int rand) {

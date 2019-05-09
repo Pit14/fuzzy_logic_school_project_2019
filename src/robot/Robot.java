@@ -1,3 +1,6 @@
+package robot;
+import util.Coord;
+
 abstract class Robot {
 
     protected String Name;
@@ -7,7 +10,7 @@ abstract class Robot {
     protected int life;
 
 
-  //  abstract void communicate();
+  //  abstract void communicate();&
     abstract void move();
 
 

@@ -1,3 +1,5 @@
+package util;
+
 public class Coord {
     private int x;
     private int y;

@@ -1,3 +1,6 @@
+package robot;
+import util.Coord;
+
 public class Mineral_extractor extends Robot {
 
     private CEO_robot chief;

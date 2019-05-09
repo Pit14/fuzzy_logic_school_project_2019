@@ -1,11 +1,16 @@
+package robot;
+import util.Cell;
+import util.Coord;
+
 public class CEO_robot extends Robot {
 
-
+    private Coord coord;
     private int NOURRITURE;
     private int water;
     private int resources;
     private Cell[][] resources_map;
     private Cell[][] pipeline_map;
+    
 
     public CEO_robot(String name, Coord coord) {
         Name = name;

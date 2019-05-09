@@ -1,3 +1,5 @@
+package util;
+
 import javafx.scene.image.Image;
 
 public class Images_manager {
