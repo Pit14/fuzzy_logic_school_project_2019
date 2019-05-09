@@ -5,6 +5,9 @@ import javafx.stage.Stage;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import planet.Planet;
+import robot.Base;
+import robot.CEO_robot;
+import util.Coord;
 import util.Images_manager;
 
 public class Main extends Application {
@@ -46,12 +49,22 @@ public class Main extends Application {
             @Override
             public void run() {
                 int x = 0;
+                Base base = new Base();
+                base.setFood(74);
+                base.setMineral(45);
+                base.setWater(30);
+
+                System.out.println(base.getWater());
+                CEO_robot ceo_robot = new CEO_robot("CEO",new Coord(7,7),base);
+
+
                 while(x < 1000) {
+                    ceo_robot.turn();
                     planet.metamorphose(50);
                     display_map(grid, i, planet);
 
                     try {
-                        Thread.sleep(10);
+                        Thread.sleep(1000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
