@@ -5,9 +5,6 @@ import util.Coord;
 public class CEO_robot extends Robot {
 
     private Coord coord;
-    private int NOURRITURE;
-    private int water;
-    private int resources;
     private Cell[][] resources_map;
     private Cell[][] pipeline_map;
     private Base base;
@@ -26,30 +23,6 @@ public class CEO_robot extends Robot {
 
     public void setCoord(Coord coord) {
         this.coord = coord;
-    }
-
-    public int getNOURRITURE() {
-        return NOURRITURE;
-    }
-
-    public void setNOURRITURE(int NOURRITURE) {
-        this.NOURRITURE = NOURRITURE;
-    }
-
-    public int getWater() {
-        return water;
-    }
-
-    public void setWater(int water) {
-        this.water = water;
-    }
-
-    public int getResources() {
-        return resources;
-    }
-
-    public void setResources(int resources) {
-        this.resources = resources;
     }
 
     public Cell[][] getResources_map() {
@@ -76,29 +49,28 @@ public class CEO_robot extends Robot {
         this.base = base;
     }
 
-
     public void add_water( int deposit) {
-        water += deposit;
+        base.setWater(base.getWater()+deposit);
     }
 
     public void take_water ( int consumption) {
-        water -= consumption;
+        base.setWater(base.getWater()-consumption);
     }
 
-    public void add_NOURRITURE( int deposit) {
-        NOURRITURE += deposit;
+    public void add_food( int deposit) {
+        base.setFood(base.getFood()+ deposit);
     }
 
-    public void take_NOURRITURE ( int consumption) {
-        NOURRITURE -= consumption;
+    public void take_food ( int consumption) {
+        base.setFood(base.getFood()-consumption);
     }
 
-    public void add_resources( int deposit) {
-        resources += deposit;
+    public void add_mineral( int deposit) {
+         base.setMineral(base.getMineral() + deposit);
     }
 
-    public void take_resources ( int consumption) {
-        resources -= consumption;
+    public void take_mineral ( int consumption) {
+        base.setMineral(base.getMineral() - consumption);
     }
 
     public void sendData() {

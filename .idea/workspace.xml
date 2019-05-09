@@ -114,12 +114,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3277" />
+          <entry key="java" value="3483" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3277" />
+          <entry key="JAVA" value="3483" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -248,26 +248,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/robot/CEO_robot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="114" column="66" selection-start-line="114" selection-start-column="66" selection-end-line="114" selection-end-column="66" />
+            <state relative-caret-position="362">
+              <caret line="72" column="57" lean-forward="true" selection-start-line="72" selection-start-column="57" selection-end-line="72" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#319#320#0" expanded="true" />
                 <element signature="e#347#348#0" expanded="true" />
                 <element signature="e#388#389#0" expanded="true" />
                 <element signature="e#422#423#0" expanded="true" />
-                <element signature="e#456#457#0" expanded="true" />
-                <element signature="e#489#490#0" expanded="true" />
-                <element signature="e#538#539#0" expanded="true" />
-                <element signature="e#582#583#0" expanded="true" />
-                <element signature="e#611#612#0" expanded="true" />
-                <element signature="e#639#640#0" expanded="true" />
-                <element signature="e#678#679#0" expanded="true" />
-                <element signature="e#712#713#0" expanded="true" />
-                <element signature="e#745#746#0" expanded="true" />
-                <element signature="e#777#778#0" expanded="true" />
-                <element signature="e#824#825#0" expanded="true" />
-                <element signature="e#866#867#0" expanded="true" />
                 <element signature="e#908#909#0" expanded="true" />
                 <element signature="e#944#945#0" expanded="true" />
                 <element signature="e#1004#1005#0" expanded="true" />
@@ -280,6 +268,18 @@
                 <element signature="e#1292#1293#0" expanded="true" />
                 <element signature="e#1330#1331#0" expanded="true" />
                 <element signature="e#1362#1363#0" expanded="true" />
+                <element signature="e#1095#1096#0" expanded="true" />
+                <element signature="e#1149#1150#0" expanded="true" />
+                <element signature="e#1198#1199#0" expanded="true" />
+                <element signature="e#1256#1257#0" expanded="true" />
+                <element signature="e#1297#1298#0" expanded="true" />
+                <element signature="e#1350#1351#0" expanded="true" />
+                <element signature="e#1404#1405#0" expanded="true" />
+                <element signature="e#1460#1461#0" expanded="true" />
+                <element signature="e#1499#1500#0" expanded="true" />
+                <element signature="e#1558#1559#0" expanded="true" />
+                <element signature="e#1611#1612#0" expanded="true" />
+                <element signature="e#1675#1676#0" expanded="true" />
                 <element signature="e#2385#2386#0" expanded="true" />
                 <element signature="e#2402#2403#0" expanded="true" />
               </folding>
@@ -444,7 +444,7 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557431531423" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557436670230" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="G:/Ensicaen related/Ensicaen/1A/S6/Java/awale - Copie (3)" />
     <property name="recentsLimit" value="5" />
@@ -553,12 +553,12 @@
       <workItem from="1556877240832" duration="1745000" />
       <workItem from="1557228926797" duration="12824000" />
       <workItem from="1557308361959" duration="25613000" />
-      <workItem from="1557398394671" duration="10810000" />
+      <workItem from="1557398394671" duration="12245000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61630000" />
+    <option name="totallyTimeSpent" value="63065000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -743,26 +743,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/robot/CEO_robot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="114" column="66" selection-start-line="114" selection-start-column="66" selection-end-line="114" selection-end-column="66" />
+        <state relative-caret-position="362">
+          <caret line="72" column="57" lean-forward="true" selection-start-line="72" selection-start-column="57" selection-end-line="72" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#319#320#0" expanded="true" />
             <element signature="e#347#348#0" expanded="true" />
             <element signature="e#388#389#0" expanded="true" />
             <element signature="e#422#423#0" expanded="true" />
-            <element signature="e#456#457#0" expanded="true" />
-            <element signature="e#489#490#0" expanded="true" />
-            <element signature="e#538#539#0" expanded="true" />
-            <element signature="e#582#583#0" expanded="true" />
-            <element signature="e#611#612#0" expanded="true" />
-            <element signature="e#639#640#0" expanded="true" />
-            <element signature="e#678#679#0" expanded="true" />
-            <element signature="e#712#713#0" expanded="true" />
-            <element signature="e#745#746#0" expanded="true" />
-            <element signature="e#777#778#0" expanded="true" />
-            <element signature="e#824#825#0" expanded="true" />
-            <element signature="e#866#867#0" expanded="true" />
             <element signature="e#908#909#0" expanded="true" />
             <element signature="e#944#945#0" expanded="true" />
             <element signature="e#1004#1005#0" expanded="true" />
@@ -775,6 +763,18 @@
             <element signature="e#1292#1293#0" expanded="true" />
             <element signature="e#1330#1331#0" expanded="true" />
             <element signature="e#1362#1363#0" expanded="true" />
+            <element signature="e#1095#1096#0" expanded="true" />
+            <element signature="e#1149#1150#0" expanded="true" />
+            <element signature="e#1198#1199#0" expanded="true" />
+            <element signature="e#1256#1257#0" expanded="true" />
+            <element signature="e#1297#1298#0" expanded="true" />
+            <element signature="e#1350#1351#0" expanded="true" />
+            <element signature="e#1404#1405#0" expanded="true" />
+            <element signature="e#1460#1461#0" expanded="true" />
+            <element signature="e#1499#1500#0" expanded="true" />
+            <element signature="e#1558#1559#0" expanded="true" />
+            <element signature="e#1611#1612#0" expanded="true" />
+            <element signature="e#1675#1676#0" expanded="true" />
             <element signature="e#2385#2386#0" expanded="true" />
             <element signature="e#2402#2403#0" expanded="true" />
           </folding>
