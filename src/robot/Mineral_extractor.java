@@ -5,12 +5,12 @@ public class Mineral_extractor extends Robot {
 
     private CEO_robot chief;
     private boolean mark_on;
-    public Mineral_extractor(String name, Coord coord, CEO_robot chief1) {
+    public Mineral_extractor(Base s_base, int s_life, String name, CEO_robot chief) {
 
-        mark_on = false;
-        chief = chief1;
-        Name = name;
-        this.coord = coord;
+        super(s_life, s_base, name);
+        this.mark_on = false;
+        this.chief = chief;
+        this.Name = name;
         System.out.println("Agent " + Name + " au rapport !");
     }
 

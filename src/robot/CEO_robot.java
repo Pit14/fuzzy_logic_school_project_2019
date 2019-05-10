@@ -4,25 +4,12 @@ import util.Coord;
 
 public class CEO_robot extends Robot {
 
-    private Coord coord;
     private Cell[][] resources_map;
     private Cell[][] pipeline_map;
-    private Base base;
 
-
-    public CEO_robot(String name, Coord coord, Base base) {
-        this.Name = name;
-        this.coord = coord;
-        this.base = base;
+    public CEO_robot(Base s_base, int s_life, String name) {
+        super(s_life, s_base, name);
         System.out.println("Agent " + Name + " au rapport !");
-    }
-
-    public Coord getCoord() {
-        return coord;
-    }
-
-    public void setCoord(Coord coord) {
-        this.coord = coord;
     }
 
     public Cell[][] getResources_map() {

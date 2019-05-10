@@ -5,12 +5,19 @@ abstract class Robot {
 
     protected String Name;
     protected Coord coord;
-    protected Coord QG;
     protected Sensor sensor;
     protected int life;
+    protected Base base;
 
 
-  //  abstract void communicate();&
+    public Robot(int life, Base base, String name) {
+        this.coord = base.getCoord();
+        this.life = life;
+        this.base = base;
+        this.Name = name;
+    }
+
+    //  abstract void communicate();&
     abstract void move();
 
 
