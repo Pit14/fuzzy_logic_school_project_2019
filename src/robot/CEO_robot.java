@@ -1,4 +1,5 @@
 package robot;
+import planet.Planet;
 import util.Cell;
 import util.Coord;
 
@@ -7,8 +8,8 @@ public class CEO_robot extends Robot {
     private Cell[][] resources_map;
     private Cell[][] pipeline_map;
 
-    public CEO_robot(Base s_base, int s_life, String name) {
-        super(s_life, s_base, name);
+    public CEO_robot(Base s_base, int s_life, String name, Planet planet) {
+        super(s_life, s_base, name, planet);
         System.out.println("Agent " + Name + " au rapport !");
     }
 
@@ -26,14 +27,6 @@ public class CEO_robot extends Robot {
 
     public void setPipeline_map(Cell[][] pipeline_map) {
         this.pipeline_map = pipeline_map;
-    }
-
-    public Base getBase() {
-        return base;
-    }
-
-    public void setBase(Base base) {
-        this.base = base;
     }
 
     public void add_water( int deposit) {

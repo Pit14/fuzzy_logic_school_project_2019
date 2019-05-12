@@ -31,8 +31,9 @@ public class Simulation {
         int metamorphose_factor;
         Base base = new Base();
 
-        CEO_robot ceo_robot = new CEO_robot(base, 100, "CEO");
-//        Mineral_extractor extractor_1 = new Mineral_extractor();
+        CEO_robot ceo_robot = new CEO_robot(base, 100, "CEO", planet);
+
+        Mineral_extractor extractor_1 = new Mineral_extractor(base, 100, "Extractor 1", ceo_robot, planet);
 
 
         while(x <= MAX_DAY) {
@@ -67,6 +68,8 @@ public class Simulation {
                 ((ImageView)gridPane.getChildren().get(y*21 + x)).setImage(grid[y][x]);
             }
         }
+
+        ((ImageView)gridPane.getChildren().get(0)).setImage(new Image ("img/food2.PNG"));
 
     }
 
