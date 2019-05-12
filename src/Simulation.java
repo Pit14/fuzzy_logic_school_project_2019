@@ -15,11 +15,16 @@ public class Simulation {
     private static final int WIDTH = 21;
     Image[][] grid; // = new Image[HEIGHT][WIDTH];
     GridPane gridPane = new GridPane();
+    Mineral_extractor extractor_1;
+    CEO_robot ceo_robot;
 
     Planet planet = new Planet();
     Images_manager i = new Images_manager();
 
     public Simulation() {
+        Base base = new Base();
+        this.ceo_robot = new CEO_robot(base, 100, "CEO", planet);
+        this.extractor_1 = new Mineral_extractor(base, 100, "Extractor 1", ceo_robot, planet);
         this.grid = initalizing_grid();
     }
 
@@ -29,17 +34,15 @@ public class Simulation {
 
         int x = 1;
         int metamorphose_factor;
-        Base base = new Base();
 
-        CEO_robot ceo_robot = new CEO_robot(base, 100, "CEO", planet);
 
-        Mineral_extractor extractor_1 = new Mineral_extractor(base, 100, "Extractor 1", ceo_robot, planet);
 
 
         while(x <= MAX_DAY) {
             System.out.println("\n\n\nBeginning of day : " + x);
 
             ceo_robot.turn();
+            extractor_1.turn();
 
             metamorphose_factor = fuzzy_lite();
             planet.metamorphose(metamorphose_factor);
@@ -58,18 +61,19 @@ public class Simulation {
     public void display_map(){
         int x,y;
 
-        for(y=0;y<HEIGHT;y++){
-            for(x=0;x<WIDTH;x++){
-                grid[y][x] = i.StateToImage(planet.getCells()[y][x].getState());
+        for(x=0;x<HEIGHT;x++){
+            for(y=0;y<WIDTH;y++){
+                grid[x][y] = i.StateToImage(planet.getCells()[x][y].getState());
             }
         }
-        for (y = 0 ; y < grid.length ; y++) {
-            for (x = 0 ; x < grid[y].length ; x++) {
-                ((ImageView)gridPane.getChildren().get(y*21 + x)).setImage(grid[y][x]);
+        for (x = 0 ; x < grid.length ; x++) {
+            for (y = 0 ; y < grid[x].length ; y++) {
+                ((ImageView)gridPane.getChildren().get(x*21 + y)).setImage(grid[x][y]);
             }
         }
 
-        ((ImageView)gridPane.getChildren().get(0)).setImage(new Image ("img/food2.PNG"));
+        ((ImageView)gridPane.getChildren().get(extractor_1.getCoord().getX()*21 + extractor_1.getCoord().getY())).
+                setImage(new Image ("img/food2.PNG"));
 
     }
 
@@ -87,6 +91,6 @@ public class Simulation {
     }
 
     public int fuzzy_lite(){
-        return 15;
+        return 0;
     }
 }

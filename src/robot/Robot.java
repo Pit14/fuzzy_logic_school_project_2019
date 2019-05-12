@@ -11,6 +11,14 @@ abstract class Robot {
     protected int life;
     protected Base base;
 
+    public Robot(int life, Base base, String name, Planet planet) {
+        this.coord = base.getCoord();
+        this.life = life;
+        this.base = base;
+        this.Name = name;
+        this.sensor = new Sensor(this);
+        this.planet = planet;
+    }
 
     public Coord getCoord() {
         return coord;
@@ -60,17 +68,10 @@ abstract class Robot {
         this.coord = coord;
     }
 
-    public Robot(int life, Base base, String name, Planet planet) {
-        this.coord = base.getCoord();
-        this.life = life;
-        this.base = base;
-        this.Name = name;
-        this.sensor = new Sensor(this);
-        this.planet = planet;
-    }
+
 
     //  abstract void communicate();&
-    abstract void move();
+    abstract void move(Coord destination);
 
 
 

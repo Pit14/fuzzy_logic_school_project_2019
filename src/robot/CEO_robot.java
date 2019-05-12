@@ -57,7 +57,7 @@ public class CEO_robot extends Robot {
 
     }
 
-    public void move(){
+    public void move(Coord dest){
         // nothing
     }
 

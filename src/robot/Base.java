@@ -12,7 +12,7 @@ public class Base {
         this.water = 0;
         this.food = 0;
         this.mineral = 0;
-        this.coord = new Coord(11,11);
+        this.coord = new Coord(10,10);
     }
 
     public Coord getCoord() {

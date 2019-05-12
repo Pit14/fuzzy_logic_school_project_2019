@@ -19,9 +19,31 @@ public class Sensor {
         Coord c = this.robot.getCoord();
         int x = c.getX();
         int y = c.getY();
+        System.out.println(this.robot.getPlanet().getCells()[x][y].getState());
 
         if(this.robot.getPlanet().getCells()[x-1][y-1].getState() == State.MINERAI) {
             return new Coord(x - 1, y - 1);
+        }
+        if(this.robot.getPlanet().getCells()[x-1][y].getState() == State.MINERAI) {
+            return new Coord(x - 1, y);
+        }
+        if(this.robot.getPlanet().getCells()[x-1][y+1].getState() == State.MINERAI) {
+            return new Coord(x - 1, y + 1);
+        }
+        if(this.robot.getPlanet().getCells()[x][y-1].getState() == State.MINERAI) {
+            return new Coord(x, y - 1);
+        }
+        if(this.robot.getPlanet().getCells()[x][y+1].getState() == State.MINERAI) {
+            return new Coord(x, y + 1);
+        }
+        if(this.robot.getPlanet().getCells()[x+1][y-1].getState() == State.MINERAI) {
+            return new Coord(x + 1, y - 1);
+        }
+        if(this.robot.getPlanet().getCells()[x+1][y].getState() == State.MINERAI) {
+            return new Coord(x + 1, y);
+        }
+        if(this.robot.getPlanet().getCells()[x+1][y+1].getState() == State.MINERAI) {
+            return new Coord(x + 1, y + 1);
         }
 
         return null;
