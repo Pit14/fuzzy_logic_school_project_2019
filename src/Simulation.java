@@ -1,3 +1,4 @@
+import javafx.scene.Group;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
@@ -15,6 +16,7 @@ public class Simulation {
     private static final int WIDTH = 21;
     Image[][] grid; // = new Image[HEIGHT][WIDTH];
     GridPane gridPane = new GridPane();
+    GridPane gridPane2 = new GridPane();
     Mineral_extractor extractor_1;
     CEO_robot ceo_robot;
 
@@ -59,6 +61,7 @@ public class Simulation {
     }
 
     public void display_map(){
+        flush();
         int x,y;
 
         for(x=0;x<HEIGHT;x++){
@@ -68,13 +71,34 @@ public class Simulation {
         }
         for (x = 0 ; x < grid.length ; x++) {
             for (y = 0 ; y < grid[x].length ; y++) {
-                ((ImageView)gridPane.getChildren().get(x*21 + y)).setImage(grid[x][y]);
+                ((ImageView) ((Group)gridPane.getChildren().get(x*21 + y)).getChildren().get(0)).setImage(grid[x][y]);
             }
         }
 
-        ((ImageView)gridPane.getChildren().get(extractor_1.getCoord().getX()*21 + extractor_1.getCoord().getY())).
-                setImage(new Image ("img/food2.PNG"));
+        ((ImageView) ((Group)gridPane.getChildren().get(extractor_1.getCoord().getX()*21 + extractor_1.getCoord().getY()))
+                .getChildren().get(1)).setImage(new Image ("img/food2.PNG"));
 
+//        ((ImageView)gridPane.getChildren().get(extractor_1.getCoord().getX()*21 + extractor_1.getCoord().getY())).
+//                setImage(new Image ("img/food2.PNG"));
+
+    }
+
+    private void flush() {
+        ((ImageView) ((Group)gridPane.getChildren().get(extractor_1.getCoord().getX()*21 + extractor_1.getCoord().getY()))
+                .getChildren().get(1)).setImage(null);
+
+        int x,y;
+
+        for(x=0;x<HEIGHT;x++){
+            for(y=0;y<WIDTH;y++){
+                grid[x][y] = i.StateToImage(planet.getCells()[x][y].getState());
+            }
+        }
+        for (x = 0 ; x < grid.length ; x++) {
+            for (y = 0 ; y < grid[x].length ; y++) {
+                ((ImageView) ((Group)gridPane.getChildren().get(x*21 + y)).getChildren().get(0)).setImage(grid[x][y]);
+            }
+        }
     }
 
     public Image[][] initalizing_grid() {
