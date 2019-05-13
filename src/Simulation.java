@@ -6,10 +6,11 @@ import planet.Planet;
 import robot.Base;
 import robot.CEO_robot;
 import robot.Mineral_extractor;
-import util.Coord;
 import util.Images_manager;
 
 public class Simulation {
+
+    private boolean running;
 
     private static final int MAX_DAY = 2922;
     private static final int HEIGHT = 21;
@@ -28,6 +29,7 @@ public class Simulation {
         this.ceo_robot = new CEO_robot(base, 100, "CEO", planet);
         this.extractor_1 = new Mineral_extractor(base, 100, "Extractor 1", ceo_robot, planet);
         this.grid = initalizing_grid();
+        this.setRunning(true);
     }
 
     public void run_simulation() {
@@ -40,7 +42,7 @@ public class Simulation {
 
 
 
-        while(x <= MAX_DAY) {
+        while(x <= MAX_DAY && isRunning()) {
             System.out.println("\n\n\nBeginning of day : " + x);
 
             ceo_robot.turn();
@@ -84,19 +86,11 @@ public class Simulation {
     }
 
     private void flush() {
-        ((ImageView) ((Group)gridPane.getChildren().get(extractor_1.getCoord().getX()*21 + extractor_1.getCoord().getY()))
-                .getChildren().get(1)).setImage(null);
-
         int x,y;
 
-        for(x=0;x<HEIGHT;x++){
-            for(y=0;y<WIDTH;y++){
-                grid[x][y] = i.StateToImage(planet.getCells()[x][y].getState());
-            }
-        }
         for (x = 0 ; x < grid.length ; x++) {
             for (y = 0 ; y < grid[x].length ; y++) {
-                ((ImageView) ((Group)gridPane.getChildren().get(x*21 + y)).getChildren().get(0)).setImage(grid[x][y]);
+                ((ImageView) ((Group)gridPane.getChildren().get(x*21 + y)).getChildren().get(1)).setImage(null);
             }
         }
     }
@@ -116,5 +110,13 @@ public class Simulation {
 
     public int fuzzy_lite(){
         return 0;
+    }
+
+    public boolean isRunning() {
+        return running;
+    }
+
+    public void setRunning(boolean running) {
+        this.running = running;
     }
 }

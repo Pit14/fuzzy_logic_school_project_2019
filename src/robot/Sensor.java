@@ -49,6 +49,11 @@ public class Sensor {
         return null;
     }
 
+    public byte get_environment() {
+        byte b = 0b00001110 & 0b00000001;
+        return b;
+    }
+
 
 //on doit passer une referénce a la planette lors de la création du robot pour pouvoir agier dessus
   /*  public State getScan() {

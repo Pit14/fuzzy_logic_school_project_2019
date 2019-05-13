@@ -78,4 +78,10 @@ public class Mineral_extractor extends Robot {
             this.setCoord(new Coord(this.getCoord().getX()+1, this.getCoord().getY()));
         }
     }
+
+    public byte getBit(int position, byte b)
+    {
+        return (byte) ((byte) (b >> position) & 1);
+    }
+
 }
