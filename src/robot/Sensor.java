@@ -51,6 +51,7 @@ public class Sensor {
 
     public byte get_environment() {
         byte b = 0b00001110 & 0b00000001;
+
         return b;
     }
 

@@ -48,7 +48,7 @@ public class Simulation {
             ceo_robot.turn();
             extractor_1.turn();
 
-            metamorphose_factor = fuzzy_lite();
+            metamorphose_factor = fuzzy_logic();
             planet.metamorphose(metamorphose_factor);
             display_map();
 
@@ -108,7 +108,7 @@ public class Simulation {
         return grid;
     }
 
-    public int fuzzy_lite(){
+    public int fuzzy_logic(){
         return 0;
     }
 
