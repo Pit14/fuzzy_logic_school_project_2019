@@ -1,0 +1,89 @@
+FUNCTION_BLOCK metamorph	// Block definition (there may be more than one block per file)
+
+// Define input variables
+VAR_INPUT
+	extract : REAL;
+	prelev : REAL;
+	terrain : REAL
+END_VAR
+
+// Define output variable
+VAR_OUTPUT
+	metamorph : REAL;
+	health : REAL;
+END_VAR
+
+// Fuzzify input variable 'extract': {'small', 'medium' , 'large'}
+FUZZIFY extract
+	TERM small := (0, 1) (10, 1) (20, 0) ;
+	TERM medium := (10, 0) (20,1) (40,1) (60,0);
+	TERM large := (40, 0) (60, 1);
+END_FUZZIFY
+
+// Fuzzify input variable 'prelev': { 'insignifiant', 'small', 'medium', 'large' }
+FUZZIFY prelev
+	TERM insignifiant := (0, 1) (8, 1) (14,0) ;
+	TERM small := (8,0) (14,1) (36,1) (44,0);
+	TERM medium := (36,0) (44,1) (66,1) (72,0);
+	TERM large := (66,0) (72,1);
+END_FUZZIFY
+
+// Defuzzify input variable 'health': { 'destroyed', 'hurt', 'healthy'}
+DEFUZZIFY health
+	TERM destroyed := (0, 1) (5, 1) (15,0) ;
+	TERM hurt := (5,0) (15,1) (50,1) (60,0);
+	TERM healthy := (50,0) (60,1) ;
+END_DEFUZZIFY
+
+// Fuzzify input variable 'terrain': { 'destroyed', 'hurt', 'healthy'}
+FUZZIFY terrain
+	TERM yes := (0, 1) (5, 1) (6,0) ;
+	TERM no := (5,0) (6,1);
+END_FUZZIFY
+
+// Defzzzify output variable 'metamorph' : {'limited', 'small', 'medium', 'large', 'important' }
+DEFUZZIFY metamorph
+	TERM limited := (0,1) (5,1) (15,0);
+	TERM small := (5,0) (15,1) (25,1) (35,0);
+	TERM medium := (25,0) (35,1) (50,1) (60,0);
+	TERM large := (50,0) (60,1) (75,1) (85,0);
+	TERM important := (75,0) (85,1);
+	METHOD : COG;		// Use 'Center Of Gravity' defuzzification method
+	DEFAULT := 0;		// Default value is 0 (if no rule activates defuzzifier)
+END_DEFUZZIFY
+
+// Inference rules
+RULEBLOCK No1
+	AND : MIN;	// Use 'min' for 'and'
+	ACT : MIN;	// Use 'min' activation method
+	ACCU : MAX;	// Use 'max' accumulation method
+
+	RULE 1 : IF extract IS small AND prelev IS insignifiant THEN metamorph IS limited;
+	RULE 2 : IF extract IS small AND prelev IS small THEN metamorph IS small;
+	RULE 3 : IF extract IS small AND prelev IS medium THEN metamorph IS small;
+	RULE 4 : IF extract IS small AND prelev IS large THEN metamorph IS medium;
+	RULE 5 : IF extract IS medium AND prelev IS insignifiant THEN metamorph IS medium;
+	RULE 6 : IF extract IS medium AND prelev IS small THEN metamorph IS medium;
+	RULE 7 : IF extract IS medium AND prelev IS medium THEN metamorph IS medium;
+	RULE 8 : IF extract IS medium AND prelev IS large THEN metamorph IS medium;
+	RULE 9 : IF extract IS large AND prelev IS insignifiant THEN metamorph IS large;
+	RULE 10 : IF extract IS large AND prelev IS small THEN metamorph IS large;
+	RULE 11: IF extract IS large AND prelev IS medium THEN metamorph IS important;
+	RULE 12: IF extract IS large AND prelev IS large THEN metamorph IS important;
+
+	RULE 13: IF metamorph IS limited AND terrain IS yes THEN health IS hurt;
+	RULE 14: IF metamorph IS limited AND terrain IS no THEN health IS healthy;
+	RULE 15: IF metamorph IS small AND terrain IS yes THEN health IS destroyed;
+	RULE 16: IF metamorph IS small AND terrain IS no THEN health IS healthy;
+	RULE 17: IF metamorph IS medium AND terrain IS yes THEN health IS destroyed;
+	RULE 18: IF metamorph IS medium AND terrain IS no THEN health IS hurt;
+	RULE 19: IF metamorph IS large AND terrain IS yes THEN health IS destroyed;
+	RULE 20: IF metamorph IS large AND terrain IS no THEN health IS hurt;
+	RULE 21: IF metamorph IS important AND terrain IS yes THEN health IS destroyed;
+	RULE 22: IF metamorph IS important AND terrain IS no THEN health IS destroyed;
+
+
+
+END_RULEBLOCK
+
+END_FUNCTION_BLOCK
