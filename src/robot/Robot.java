@@ -10,14 +10,27 @@ abstract class Robot {
     protected Sensor sensor;
     protected int life;
     protected Base base;
+    private CEO_robot chief;
 
-    public Robot(int life, Base base, String name, Planet planet) {
+    public Robot(int life, Base base, String name, Planet planet, CEO_robot chief) {
         this.coord = base.getCoord();
         this.life = life;
         this.base = base;
         this.Name = name;
         this.sensor = new Sensor(this);
         this.planet = planet;
+        this.chief = chief;
+        if(chief != null) {
+            this.getChief().add_robot_to_list(this);
+        }
+    }
+
+    public CEO_robot getChief() {
+        return chief;
+    }
+
+    public void setChief(CEO_robot chief) {
+        this.chief = chief;
     }
 
     public Coord getCoord() {

@@ -7,13 +7,11 @@ public class Mineral_extractor extends Robot {
 
     private boolean is_mining;
     private boolean is_going_to_base;
-    private CEO_robot chief;
     private Coord marked_coord;
     private boolean is_carrying_ore;
     public Mineral_extractor(Base s_base, int s_life, String name, CEO_robot chief, Planet planet) {
 
-        super(s_life, s_base, name, planet);
-        this.chief = chief;
+        super(s_life, s_base, name, planet, chief);
         this.Name = name;
         is_mining = false;
         is_going_to_base = false;
@@ -25,7 +23,7 @@ public class Mineral_extractor extends Robot {
     public void communicate () {
 
         //TODO
-        chief.sendData();
+//        chief.sendData();
     }
 
     public void move(Coord destination) {
@@ -63,7 +61,7 @@ public class Mineral_extractor extends Robot {
 
     private void look_for_ore() {
         Coord c = sensor.is_there_mineral_around();
-        System.out.println(c);
+        //System.out.println(c);
 
         if(c != null){ // mineral around the robot, we go to the cell
             // go to mineral
@@ -75,9 +73,12 @@ public class Mineral_extractor extends Robot {
 
         } else { // go random but not from where we come from
             //TODO
-            this.setCoord(new Coord(this.getCoord().getX()+1, this.getCoord().getY()));
+
+            this.setCoord(Coord.random_coord(this.getCoord()));//new Coord(this.getCoord().getX()+1, this.getCoord().getY()));
         }
     }
+
+
 
     public byte getBit(int position, byte b)
     {
