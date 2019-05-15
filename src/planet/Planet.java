@@ -11,6 +11,20 @@ public class Planet {
 
     private Cell[][] cells;
 
+    /**
+     * return false if the cell is a lac or a forbiden zone
+     * @param x
+     * @param y
+     * @return
+     */
+    public boolean is_available(int x, int y) {
+        if(this.cells[x-1][y-1].getState() == State.LAC ||
+        this.cells[x-1][y-1].getState() == State.ZONE_INFRANCHISSABLE){
+            return false;
+        }
+        return true;
+    }
+
     public Cell[][] getCells() {
         return cells;
     }

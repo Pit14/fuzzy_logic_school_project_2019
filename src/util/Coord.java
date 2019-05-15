@@ -24,4 +24,10 @@ public class Coord {
         this.x = x;
         this.y = y;
     }
+
+    public static Coord random_coord(Coord coord) {
+        //TODO
+
+        return new Coord(11,1);
+    }
 }

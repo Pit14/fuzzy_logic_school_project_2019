@@ -1,5 +1,6 @@
 package robot;
 
+import util.Cell;
 import util.Coord;
 import util.State;
 
@@ -50,16 +51,17 @@ public class Sensor {
     }
 
     public byte get_environment() {
-        byte b = 0b00001110 & 0b00000001;
+        byte b = 0b00000000;
+        int x, y;
+        x = this.robot.getCoord().getX();
+        y = this.robot.getCoord().getY();
+
+        if(this.robot.getPlanet().is_available(x-1,y-1) && !this.robot.getChief().is_there_robot(x,y) ) { // NW
+            b = (byte) (b & 0b00000001);
+        }
+
 
         return b;
     }
 
-
-//on doit passer une referénce a la planette lors de la création du robot pour pouvoir agier dessus
-  /*  public State getScan() {
-        return .....
-    }*/
 }
-
- // lib pour logique flou, faire fctn d'appartenance, la lib calcul en fonction de nos règles
