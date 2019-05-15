@@ -55,6 +55,7 @@ public class Mineral_extractor extends Robot {
                 }
             }
         } else { // looking for a mine
+            System.out.println("coco");
             look_for_ore();
         }
     }
@@ -72,13 +73,13 @@ public class Mineral_extractor extends Robot {
             this.marked_coord = c;
 
         } else { // go random but not from where we come from
-            //TODO
-
-            this.setCoord(Coord.random_coord(this.getCoord()));//new Coord(this.getCoord().getX()+1, this.getCoord().getY()));
+            Coord rc = new Coord(0,0);
+            do {
+                rc = Coord.random_coord(this.getCoord());
+            } while(rc.is_valid_coord() == false);
+            this.setCoord(rc);
         }
     }
-
-
 
     public byte getBit(int position, byte b)
     {

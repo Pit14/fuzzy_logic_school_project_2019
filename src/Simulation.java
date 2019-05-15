@@ -14,8 +14,8 @@ public class Simulation {
     private boolean running;
 
     private static final int MAX_DAY = 2922;
-    private static final int HEIGHT = 21;
-    private static final int WIDTH = 21;
+    public static  int HEIGHT = 21;
+    public static final int WIDTH = 21;
     Image[][] grid; // = new Image[HEIGHT][WIDTH];
     GridPane gridPane = new GridPane();
     GridPane gridPane2 = new GridPane();
