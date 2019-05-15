@@ -4,7 +4,7 @@ FUNCTION_BLOCK metamorph	// Block definition (there may be more than one block p
 VAR_INPUT
 	extract : REAL;
 	prelev : REAL;
-	terrain : REAL
+	terrain : REAL;
 END_VAR
 
 // Define output variable

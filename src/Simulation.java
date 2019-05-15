@@ -1,3 +1,4 @@
+import fuzzyLogic.fuzzyClass;
 import javafx.scene.Group;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -19,6 +20,7 @@ public class Simulation {
     GridPane gridPane = new GridPane();
     GridPane gridPane2 = new GridPane();
     Mineral_extractor extractor_1;
+    fuzzyClass fuzzy = new fuzzyClass();
     CEO_robot ceo_robot;
 
     Planet planet = new Planet();
@@ -109,7 +111,7 @@ public class Simulation {
     }
 
     public int fuzzy_logic(){
-        return 0;
+        return fuzzy.getMeta(1,1);
     }
 
     public boolean isRunning() {
