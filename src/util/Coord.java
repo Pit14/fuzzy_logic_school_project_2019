@@ -36,7 +36,6 @@ public class Coord {
     }
 
     public static Coord random_coord(Coord coord) {
-        //TODO
 
         Random rand = new Random();
         int n = rand.nextInt(8) + 1;

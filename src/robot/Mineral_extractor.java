@@ -55,9 +55,10 @@ public class Mineral_extractor extends Robot {
                 }
             }
         } else { // looking for a mine
-            System.out.println("coco");
             look_for_ore();
         }
+        System.out.println(this.getPlanet().getCells()[this.getCoord().getX()][this.getCoord().getY()].getState());
+
     }
 
     private void look_for_ore() {
@@ -76,7 +77,7 @@ public class Mineral_extractor extends Robot {
             Coord rc = new Coord(0,0);
             do {
                 rc = Coord.random_coord(this.getCoord());
-            } while(rc.is_valid_coord() == false);
+            } while(!this.getPlanet().is_available(rc.getX(),rc.getY()));
             this.setCoord(rc);
         }
     }

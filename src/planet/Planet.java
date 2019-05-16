@@ -18,10 +18,14 @@ public class Planet {
      * @return
      */
     public boolean is_available(int x, int y) {
-        if(this.cells[x-1][y-1].getState() == State.LAC ||
-        this.cells[x-1][y-1].getState() == State.ZONE_INFRANCHISSABLE){
+        if(x < 0 || x > 21 || y < 0 || y > 21) {
             return false;
         }
+        else if(this.cells[x][y].getState() == State.LAC ||
+                this.cells[x][y].getState() == State.ZONE_INFRANCHISSABLE){
+            return false;
+        }
+
         return true;
     }
 
@@ -110,8 +114,8 @@ public class Planet {
                 return pick_state_minerai(rand);
             case LAC:
                 return State.LAC;
-                default:
-                    return State.BASE;
+            default:
+                return State.BASE;
         }
     }
 

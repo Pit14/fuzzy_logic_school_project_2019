@@ -84,9 +84,9 @@ public class CEO_robot extends Robot {
     }
 
     public void display_base_ressources() {
-        System.out.println("Water : " + this.base.getWater());
-        System.out.println("Food : " + this.base.getFood());
-        System.out.println("Ressouces : " + this.base.getMineral());
+//        System.out.println("Water : " + this.base.getWater());
+//        System.out.println("Food : " + this.base.getFood());
+//        System.out.println("Ressouces : " + this.base.getMineral());
     }
 
     public void turn() {

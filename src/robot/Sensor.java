@@ -19,7 +19,7 @@ public class Sensor {
         Coord c = this.robot.getCoord();
         int x = c.getX();
         int y = c.getY();
-        System.out.println(this.robot.getPlanet().getCells()[x][y].getState());
+        //System.out.println(this.robot.getPlanet().getCells()[x][y].getState());
 
 
         if(x-1 >= 0 && y-1 >= 0) {

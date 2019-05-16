@@ -41,21 +41,18 @@ public class Simulation {
         int x = 1;
         int metamorphose_factor;
 
-
-
-
         while(x <= MAX_DAY && isRunning()) {
             System.out.println("\n\n\nBeginning of day : " + x);
 
             ceo_robot.turn();
             extractor_1.turn();
 
-            metamorphose_factor = fuzzy_logic();
-            planet.metamorphose(metamorphose_factor);
+//            metamorphose_factor = fuzzy_logic();
+//            planet.metamorphose(metamorphose_factor);
             display_map();
 
             try {
-                Thread.sleep(1000);
+                Thread.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
