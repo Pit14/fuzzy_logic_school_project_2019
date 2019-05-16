@@ -27,11 +27,41 @@ public class Mineral_extractor extends Robot {
     }
 
     public void move(Coord destination) {
-        if(is_going_to_base) {
-            // astar
-        } else {
+        if (this.getCoord().getX() < this.getBase().getCoord().getX()) { // robot north
+            System.out.println("NORTH");
+            if (this.getPlanet().is_available(this.getCoord().getX() + 1, this.getCoord().getY())) {
+                this.setCoord(new Coord(this.getCoord().getX() + 1, this.getCoord().getY()));
+            }
 
         }
+
+        if (this.getCoord().getX() > this.getBase().getCoord().getX()) { // robot south
+            System.out.println("south");
+
+            if (this.getPlanet().is_available(this.getCoord().getX() - 1, this.getCoord().getY())) {
+                this.setCoord(new Coord(this.getCoord().getX() - 1, this.getCoord().getY()));
+            }
+
+        }
+
+        if (this.getCoord().getY() < this.getBase().getCoord().getY()) { // robot west
+            System.out.println("WEST");
+            if (this.getPlanet().is_available(this.getCoord().getX(), this.getCoord().getY()+1)) {
+                this.setCoord(new Coord(this.getCoord().getX(), this.getCoord().getY()+1));
+            }
+
+        }
+
+        if (this.getCoord().getY() > this.getBase().getCoord().getY()) { // robot east
+            System.out.println("east");
+
+            if (this.getPlanet().is_available(this.getCoord().getX(), this.getCoord().getY()-1)) {
+                this.setCoord(new Coord(this.getCoord().getX(), this.getCoord().getY()-1));
+            }
+
+        }
+
+
     }
 
     public void mine() {

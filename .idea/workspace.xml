@@ -109,12 +109,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="8653" />
+          <entry key="java" value="8984" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8653" />
+          <entry key="JAVA" value="8984" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -141,8 +141,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Simulation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="55" column="46" lean-forward="true" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
+            <state relative-caret-position="202">
+              <caret line="51" column="14" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -165,8 +165,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/robot/Sensor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+            <state relative-caret-position="117">
+              <caret line="71" column="47" lean-forward="true" selection-start-line="71" selection-start-column="47" selection-end-line="71" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -186,8 +186,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/planet/Planet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+            <state relative-caret-position="-978">
+              <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#Planet#0;class#Planet#0" />
@@ -209,12 +209,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/robot/Mineral_extractor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="64" column="18" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
+            <state relative-caret-position="334">
+              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2551#2552#0" expanded="true" />
-                <element signature="e#2609#2610#0" expanded="true" />
+                <element signature="e#2652#2653#0" expanded="true" />
+                <element signature="e#2710#2711#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -235,8 +235,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/util/Coord.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+            <state relative-caret-position="394">
+              <caret line="58" column="59" selection-start-line="58" selection-start-column="59" selection-end-line="58" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -329,10 +329,10 @@
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/robot/Robot.java" />
         <option value="$PROJECT_DIR$/src/robot/CEO_robot.java" />
-        <option value="$PROJECT_DIR$/src/robot/Sensor.java" />
-        <option value="$PROJECT_DIR$/src/util/Coord.java" />
-        <option value="$PROJECT_DIR$/src/Simulation.java" />
         <option value="$PROJECT_DIR$/src/planet/Planet.java" />
+        <option value="$PROJECT_DIR$/src/util/Coord.java" />
+        <option value="$PROJECT_DIR$/src/robot/Sensor.java" />
+        <option value="$PROJECT_DIR$/src/Simulation.java" />
         <option value="$PROJECT_DIR$/src/robot/Mineral_extractor.java" />
       </list>
     </option>
@@ -533,12 +533,12 @@
       <workItem from="1557759596592" duration="5163000" />
       <workItem from="1557840828723" duration="7035000" />
       <workItem from="1557925084452" duration="8407000" />
-      <workItem from="1557987400686" duration="6503000" />
+      <workItem from="1557987400686" duration="13141000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128890000" />
+    <option name="totallyTimeSpent" value="135528000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -689,37 +689,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/robot/Sensor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Simulation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="55" column="46" lean-forward="true" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/Coord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/planet/Planet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+        <state relative-caret-position="-978">
+          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Planet#0;class#Planet#0" />
@@ -737,14 +710,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/robot/Mineral_extractor.java">
+    <entry file="file://$PROJECT_DIR$/src/util/Coord.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="64" column="18" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
+        <state relative-caret-position="394">
+          <caret line="58" column="59" selection-start-line="58" selection-start-column="59" selection-end-line="58" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/robot/Sensor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="71" column="47" lean-forward="true" selection-start-line="71" selection-start-column="47" selection-end-line="71" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2551#2552#0" expanded="true" />
-            <element signature="e#2609#2610#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Simulation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="51" column="14" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/robot/Mineral_extractor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2652#2653#0" expanded="true" />
+            <element signature="e#2710#2711#0" expanded="true" />
           </folding>
         </state>
       </provider>

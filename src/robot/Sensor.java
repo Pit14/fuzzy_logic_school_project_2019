@@ -21,7 +21,6 @@ public class Sensor {
         int y = c.getY();
         //System.out.println(this.robot.getPlanet().getCells()[x][y].getState());
 
-
         if(x-1 >= 0 && y-1 >= 0) {
 
             if (this.robot.getPlanet().getCells()[x-1][y-1].getState() == State.MINERAI) {
@@ -36,38 +35,38 @@ public class Sensor {
             }
         }
 
-        if(x-1 >= 0 && y+1 <= 21) {
+        if(x-1 >= 0 && y+1 <= 20) {
 
             if(this.robot.getPlanet().getCells()[x-1][y+1].getState() == State.MINERAI) {
                 return new Coord(x - 1, y + 1);
             }
         }
 
-        if(y-1 <= 0) {
+        if(y-1 >= 0) {
 
             if(this.robot.getPlanet().getCells()[x][y-1].getState() == State.MINERAI) {
                 return new Coord(x, y - 1);
             }
         }
-        if( y+1 <= 21) {
+        if( y+1 <= 20) {
 
             if(this.robot.getPlanet().getCells()[x][y+1].getState() == State.MINERAI) {
                 return new Coord(x, y + 1);
             }
         }
-        if(x+1 <= 21 && y-1 <= 0) {
+        if(x+1 <= 20 && y-1 >= 0) {
 
             if(this.robot.getPlanet().getCells()[x+1][y-1].getState() == State.MINERAI) {
                 return new Coord(x + 1, y - 1);
             }
         }
-        if(x+1 <= 21) {
+        if(x+1 <= 20) {
 
             if(this.robot.getPlanet().getCells()[x+1][y].getState() == State.MINERAI) {
                 return new Coord(x + 1, y);
             }        }
 
-        if(x+1 <= 21 && y+1 <= 21) {
+        if(x+1 <= 20 && y+1 <= 20) {
 
             if(this.robot.getPlanet().getCells()[x+1][y+1].getState() == State.MINERAI) {
                 return new Coord(x + 1, y + 1);

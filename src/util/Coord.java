@@ -54,9 +54,9 @@ public class Coord {
             case 6:
                 return new Coord(coord.getX()+1,coord.getY()); // e
             case 7:
-                return new Coord(coord.getX()+1,coord.getY()-1); // ne
+                return new Coord(coord.getX()+1,coord.getY()+1); // ne
             case 8:
-                return new Coord(coord.getX(),coord.getY()-1); // n
+                return new Coord(coord.getX(),coord.getY()+1); // n
             default:
                 return new Coord(coord.getX(),coord.getY());
 

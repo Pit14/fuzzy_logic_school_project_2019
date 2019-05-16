@@ -18,7 +18,7 @@ public class Planet {
      * @return
      */
     public boolean is_available(int x, int y) {
-        if(x < 0 || x > 21 || y < 0 || y > 21) {
+        if(x < 0 || x > 20 || y < 0 || y > 20) {
             return false;
         }
         else if(this.cells[x][y].getState() == State.LAC ||
