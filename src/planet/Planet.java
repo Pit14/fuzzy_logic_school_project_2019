@@ -10,6 +10,7 @@ public class Planet {
     private static final int WIDTH = 21;
 
     private Cell[][] cells;
+    private int extraction;
 
     /**
      * return false if the cell is a lac or a forbiden zone
@@ -208,6 +209,12 @@ public class Planet {
         }
     }
 
+    public int getExtraction() {
+        return extraction;
+    }
 
+    public void setExtraction(int extraction) {
+        this.extraction = extraction;
+    }
 
 }

@@ -3,12 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fuzzyLogic/fuzzyClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fuzzyLogic/fuzzyClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/planet/Planet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/planet/Planet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/robot/CEO_robot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robot/CEO_robot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/robot/Mineral_extractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robot/Mineral_extractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/robot/Sensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/robot/Sensor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/Coord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Coord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/Images_manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Images_manager.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -96,37 +96,37 @@
     <session id="-4382416">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
+          <entry key="project.closed" value="13" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.25" value="4" />
           <entry key="project.open.time.26" value="2" />
-          <entry key="project.open.time.27" value="3" />
+          <entry key="project.open.time.27" value="4" />
           <entry key="project.open.time.29" value="1" />
-          <entry key="project.opened" value="13" />
+          <entry key="project.opened" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="8984" />
+          <entry key="java" value="9988" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8984" />
+          <entry key="JAVA" value="9988" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="fuzzyfile" value="1" />
           <entry key="fxml" value="1" />
-          <entry key="java" value="24" />
+          <entry key="java" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="24" />
+          <entry key="JAVA" value="25" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="XML" value="1" />
         </counts>
@@ -141,11 +141,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Simulation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="51" column="14" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
+            <state relative-caret-position="91">
+              <caret line="58" column="36" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#4255#4256#0" expanded="true" />
+                <element signature="e#4307#4308#0" expanded="true" />
+                <element signature="e#4341#4342#0" expanded="true" />
+                <element signature="e#4371#4372#0" expanded="true" />
+                <element signature="e#4418#4419#0" expanded="true" />
+                <element signature="e#4456#4457#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/util/Images_manager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="142">
+              <caret line="43" column="26" lean-forward="true" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -153,8 +168,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fuzzyLogic/fuzzyClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+            <state relative-caret-position="-358">
+              <caret line="21" column="103" selection-start-line="21" selection-start-column="103" selection-end-line="21" selection-end-column="103" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -165,8 +180,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/robot/Sensor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="71" column="47" lean-forward="true" selection-start-line="71" selection-start-column="47" selection-end-line="71" selection-end-column="47" />
+            <state relative-caret-position="-78">
+              <caret line="71" column="47" selection-start-line="71" selection-start-column="47" selection-end-line="71" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -186,8 +201,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/planet/Planet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-978">
-              <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+            <state relative-caret-position="-1278">
+              <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#Planet#0;class#Planet#0" />
@@ -201,20 +216,24 @@
                 <element signature="method#pick_state_zone_infranchissable#0;class#Planet#0" />
                 <element signature="method#pick_state_pierralle#0;class#Planet#0" />
                 <element signature="method#pick_state_minerai#0;class#Planet#0" />
+                <element signature="e#13374#13375#0" expanded="true" />
+                <element signature="e#13407#13408#0" expanded="true" />
+                <element signature="e#13456#13457#0" expanded="true" />
+                <element signature="e#13500#13501#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/robot/Mineral_extractor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="254">
+              <caret line="107" lean-forward="true" selection-start-line="107" selection-end-line="107" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2652#2653#0" expanded="true" />
-                <element signature="e#2710#2711#0" expanded="true" />
+                <element signature="e#3868#3869#0" expanded="true" />
+                <element signature="e#3926#3927#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -223,8 +242,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="882">
-              <caret line="49" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="820">
+              <caret line="41" column="38" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -235,7 +254,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/util/Coord.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
+            <state relative-caret-position="1000">
               <caret line="58" column="59" selection-start-line="58" selection-start-column="59" selection-end-line="58" selection-end-column="59" />
             </state>
           </provider>
@@ -244,8 +263,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/robot/CEO_robot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="88" column="70" lean-forward="true" selection-start-line="86" selection-start-column="10" selection-end-line="88" selection-end-column="70" />
+            <state relative-caret-position="1240">
+              <caret line="88" column="70" selection-start-line="86" selection-start-column="10" selection-end-line="88" selection-end-column="70" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -284,6 +303,9 @@
       <find>random</find>
       <find>LAC</find>
       <find>System.out.println</find>
+      <find>pla</find>
+      <find>this.getBase().getCoord()</find>
+      <find>println</find>
     </findStrings>
     <replaceStrings>
       <replace>LAKE</replace>
@@ -301,6 +323,7 @@
       <replace>NOURRITURE</replace>
       <replace>ZONE_INFRANCHISSABLE</replace>
       <replace>State.ZONE_INFRANCHISSABLE</replace>
+      <replace>destination</replace>
     </replaceStrings>
   </component>
   <component name="FindManager">
@@ -326,14 +349,16 @@
         <option value="$PROJECT_DIR$/src/util/State.java" />
         <option value="$PROJECT_DIR$/src/robot/Base.java" />
         <option value="$PROJECT_DIR$/src/util/Cell.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/robot/Robot.java" />
         <option value="$PROJECT_DIR$/src/robot/CEO_robot.java" />
-        <option value="$PROJECT_DIR$/src/planet/Planet.java" />
         <option value="$PROJECT_DIR$/src/util/Coord.java" />
         <option value="$PROJECT_DIR$/src/robot/Sensor.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/util/Images_manager.java" />
+        <option value="$PROJECT_DIR$/src/planet/Planet.java" />
         <option value="$PROJECT_DIR$/src/Simulation.java" />
         <option value="$PROJECT_DIR$/src/robot/Mineral_extractor.java" />
+        <option value="$PROJECT_DIR$/src/fuzzyLogic/fuzzyClass.java" />
       </list>
     </option>
   </component>
@@ -365,8 +390,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -383,7 +407,7 @@
               <item name="project_ia" type="b2602c69:ProjectViewProjectNode" />
               <item name="project_ia" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="fuzzyLogic" type="462c0819:PsiDirectoryNode" />
+              <item name="planet" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="project_ia" type="b2602c69:ProjectViewProjectNode" />
@@ -399,7 +423,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -412,7 +437,7 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557934059447" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558188826424" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/jFuzzyLogic.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -533,18 +558,19 @@
       <workItem from="1557759596592" duration="5163000" />
       <workItem from="1557840828723" duration="7035000" />
       <workItem from="1557925084452" duration="8407000" />
-      <workItem from="1557987400686" duration="13141000" />
+      <workItem from="1557987400686" duration="13448000" />
+      <workItem from="1558178190597" duration="7925000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135528000" />
+    <option name="totallyTimeSpent" value="143760000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.19395973" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.19664429" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -619,13 +645,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/Images_manager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="42" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/robot/Base.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -649,9 +668,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fuzzyLogic/fuzzyfile">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fuzzyLogic/fuzzyfile" />
     <entry file="file://$PROJECT_DIR$/src/util/Cell.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -659,30 +676,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fuzzyLogic/fuzzyClass.java">
+    <entry file="file://$PROJECT_DIR$/src/util/Coord.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="1000">
+          <caret line="58" column="59" selection-start-line="58" selection-start-column="59" selection-end-line="58" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/robot/CEO_robot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="88" column="70" lean-forward="true" selection-start-line="86" selection-start-column="10" selection-end-line="88" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        <state relative-caret-position="1240">
+          <caret line="88" column="70" selection-start-line="86" selection-start-column="10" selection-end-line="88" selection-end-column="70" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -691,8 +695,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/planet/Planet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-978">
-          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+        <state relative-caret-position="-1278">
+          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Planet#0;class#Planet#0" />
@@ -706,31 +710,34 @@
             <element signature="method#pick_state_zone_infranchissable#0;class#Planet#0" />
             <element signature="method#pick_state_pierralle#0;class#Planet#0" />
             <element signature="method#pick_state_minerai#0;class#Planet#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/Coord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="58" column="59" selection-start-line="58" selection-start-column="59" selection-end-line="58" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/robot/Sensor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="71" column="47" lean-forward="true" selection-start-line="71" selection-start-column="47" selection-end-line="71" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#13374#13375#0" expanded="true" />
+            <element signature="e#13407#13408#0" expanded="true" />
+            <element signature="e#13456#13457#0" expanded="true" />
+            <element signature="e#13500#13501#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Simulation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="51" column="14" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
+        <state relative-caret-position="91">
+          <caret line="58" column="36" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4255#4256#0" expanded="true" />
+            <element signature="e#4307#4308#0" expanded="true" />
+            <element signature="e#4341#4342#0" expanded="true" />
+            <element signature="e#4371#4372#0" expanded="true" />
+            <element signature="e#4418#4419#0" expanded="true" />
+            <element signature="e#4456#4457#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="820">
+          <caret line="41" column="38" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -739,13 +746,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/robot/Mineral_extractor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="254">
+          <caret line="107" lean-forward="true" selection-start-line="107" selection-end-line="107" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2652#2653#0" expanded="true" />
-            <element signature="e#2710#2711#0" expanded="true" />
+            <element signature="e#3868#3869#0" expanded="true" />
+            <element signature="e#3926#3927#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fuzzyLogic/fuzzyClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-358">
+          <caret line="21" column="103" selection-start-line="21" selection-start-column="103" selection-end-line="21" selection-end-column="103" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/robot/Sensor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-78">
+          <caret line="71" column="47" selection-start-line="71" selection-start-column="47" selection-end-line="71" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/Images_manager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="43" column="26" lean-forward="true" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
         </state>
       </provider>
     </entry>

@@ -1,11 +1,8 @@
 import javafx.application.Application;
-import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.scene.image.ImageView;
-import javafx.stage.WindowEvent;
 
 public class Main extends Application {
 
@@ -32,7 +29,6 @@ public class Main extends Application {
                 imageView.setFitHeight(tileSize);
                 imageView2.setFitWidth(tileSize);
                 imageView2.setFitHeight(tileSize);
-//                simulation.gridPane.add(imageView, x, y);
                 simulation.gridPane.add(group, x, y);
             }
         }
@@ -43,6 +39,7 @@ public class Main extends Application {
 
         primaryStage.setOnHiding(event -> simulation.setRunning(false));
 
+        // We start a new thread in which the simulation will be running
         new Thread(new Runnable() {
             @Override
             public void run() {

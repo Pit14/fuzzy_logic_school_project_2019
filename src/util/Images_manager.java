@@ -15,6 +15,7 @@ public class Images_manager {
     Image di = new Image ("img/prairie_normale.png");
     Image ba = new Image ("img/base.png");
     Image ar = new Image ("img/foret.png");
+    public static Image robot = new Image("img/robot.PNG");
 
     public void Images_manager(){
 

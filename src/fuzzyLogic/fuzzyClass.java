@@ -20,7 +20,6 @@ public class fuzzyClass {
             fis.evaluate(); // Evaluate
 
             // use fis.getVariable("nom del a donnée").getValue() pour obenir la valeur selon les INPUT
-            System.out.println("Output value:" + fis.getVariable("metamorph").getValue());
             return (int)fis.getVariable("metamorph").getValue();
         }
 }
